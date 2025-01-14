@@ -68,6 +68,6 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - /home/jamie/dotfiles/services/homepage-config:/app/config
+      - /home/jamie/home-services/homepage-config:/app/config
     restart: unless-stopped
     env_file: .env
