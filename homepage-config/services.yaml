@@ -31,6 +31,9 @@
       description:
       server: local-docker
       container: octograph-grafana-1
+  - Pi-hole:
+      href: http://192.168.178.97/admin 
+      description:
 
 - Diskstation:
   - Audio:
