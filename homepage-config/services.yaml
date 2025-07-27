@@ -4,36 +4,41 @@
 
 - Services:
   - FreshRSS:
-      href: http://teasel:2080
+      href: http://192.168.178.97:2080
       description:
       server: local-docker
       container: freshrss
       widget:
         type: freshrss
-        url: http://teasel:2080
+        url: http://192.168.178.97:2080
         username: jamie
         password: {{HOMEPAGE_VAR_FRESHRSS_API_KEY}}
   - Speedtest Tracker:
-      href: http://teasel:1080
+      href: http://192.168.178.97:1080
       description:
       server: local-docker
       container: speedtest-tracker
       widget:
         type: speedtest
-        url: http://teasel:1080/admin
+        url: http://192.168.178.97:1080/admin
   - Finances:
-      href: http://teasel:3080
+      href: http://192.168.178.97:3080
       description:
       server: local-docker
       container: finances
   - Octograph:
-      href: http://teasel:3001/d/da368873-f72e-4dd9-a3d5-01a84cff98d8/energy-usage?orgId=1
+      href: http://192.168.178.97:3001/d/da368873-f72e-4dd9-a3d5-01a84cff98d8/energy-usage?orgId=1
       description:
       server: local-docker
       container: octograph-grafana-1
   - Pi-hole:
       href: http://192.168.178.97/admin
       description:
+      widget:
+        type: pihole
+        url: http://192.168.178.97
+        version: 6
+        key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
 
 - Diskstation:
   - Audio:
