@@ -3,6 +3,22 @@
 # https://gethomepage.dev/latest/configs/services
 
 - Services:
+  - Pi-hole:
+      href: http://192.168.178.97/admin
+      description:
+      widget:
+        type: pihole
+        url: http://192.168.178.97
+        version: 6
+        key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+  - Speedtest Tracker:
+      href: http://192.168.178.97:1080
+      description:
+      server: local-docker
+      container: speedtest-tracker
+      widget:
+        type: speedtest
+        url: http://192.168.178.97:1080
   - FreshRSS:
       href: http://192.168.178.97:2080
       description:
@@ -13,14 +29,6 @@
         url: http://192.168.178.97:2080
         username: jamie
         password: {{HOMEPAGE_VAR_FRESHRSS_API_KEY}}
-  - Speedtest Tracker:
-      href: http://192.168.178.97:1080
-      description:
-      server: local-docker
-      container: speedtest-tracker
-      widget:
-        type: speedtest
-        url: http://192.168.178.97:1080
   - Finances:
       href: http://192.168.178.97:3080
       description:
@@ -31,14 +39,6 @@
       description:
       server: local-docker
       container: octograph-grafana-1
-  - Pi-hole:
-      href: http://192.168.178.97/admin
-      description:
-      widget:
-        type: pihole
-        url: http://192.168.178.97
-        version: 6
-        key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
 
 - Diskstation:
   - Audio:
