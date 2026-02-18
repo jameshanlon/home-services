@@ -52,7 +52,7 @@ services:
     image: nginx
     container_name: energy
     volumes:
-      - /home/jamie/home-energy/output:/usr/share/nginx/html
+      - /home/jamie/energy-data/output:/usr/share/nginx/html
     ports:
       - 4080:80
     environment:
