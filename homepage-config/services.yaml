@@ -34,6 +34,11 @@
       description:
       server: local-docker
       container: finances
+  - Energy:
+      href: http://192.168.178.97:4080
+      description:
+      server: local-docker
+      container: energy
   - Octograph:
       href: http://192.168.178.97:3001/d/da368873-f72e-4dd9-a3d5-01a84cff98d8/energy-usage?orgId=1
       description:
